@@ -5,4 +5,4 @@ class Persona:
         self.dni=dni
     
     def mostrar(self):
-        print(f"{self.apellido}, {self.nombre}, {self.dni}")
+        print(f"{self.nombre}, {self.dni}")
