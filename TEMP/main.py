@@ -1,12 +1,13 @@
-from Lib.arbol import ArbolBinario
-from Lib.Persona import Persona
+from arbol import ArbolBinario
+from Persona import Persona
 
 def menu():
     while True:
         print("1- Agregar una persona")
         print("2- Mostrar Arbol de Apellidos y Lista de Personas")
-        print("3- Borrar una persona")
-        print("4- Salir")
+        print("3- Editar una persona")
+        print("4- Borrar persona")
+        print("5- Salir")
         
         try:
             opcion=int(input("Ingrese un numero: "))
@@ -22,7 +23,8 @@ def main():
 
     arbol=ArbolBinario()
 
-    while opcion!=4:
+    while opcion!=5:
+        print(f"nodos: {arbol.contarNodos(arbol.raiz)}")
         opcion=menu()
         
         match(opcion):
@@ -36,11 +38,13 @@ def main():
                 
             case 2:
                 arbol.mostrar()
-
+                pass
             case 3:
-                arbol.borrarPersona(arbol.raiz)
-
+                pass
             case 4:
+                arbol.borrarPersona(arbol.raiz)
+                pass
+            case 5:
                 break
             case _:
                 print("Opcion invaida")
